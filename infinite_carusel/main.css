@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > div {
+  width: 80%;
+  border: 1px solid black;
+  position: relative;
+  height: 50px;
+  margin-inline: auto;
+  max-width: 1500px;
+  overflow: hidden;
+}
+
+.item {
+  background: red;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  position: absolute;
+  left: 100%;
+  animation-name: animate;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item-1 {
+  animation-delay: -27s;
+}
+.item-2 {
+  animation-delay: -24s;
+}
+.item-3 {
+  animation-delay: -21s;
+}
+.item-4 {
+  animation-delay: -18s;
+}
+.item-5 {
+  animation-delay: -15s;
+}
+.item-6 {
+  animation-delay: -12s;
+}
+.item-7 {
+  animation-delay: -9s;
+}
+.item-8 {
+  animation-delay: -6s;
+}
+.item-9 {
+  animation-delay: -3s;
+}
+.item-10 {
+  animation-delay: 0s;
+}
+
+@keyframes animate {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .item {
+    width: 80px;
+    height: 40px;
+  }
+  body > div {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .item {
+    width: 60px;
+    height: 30px;
+  }
+  body > div {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .item {
+    width: 50px;
+    height: 25px;
+  }
+  body > div {
+    height: 25px;
+  }
+}
