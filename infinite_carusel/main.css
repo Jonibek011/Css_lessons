@@ -9,16 +9,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #000;
 }
 
 body > div {
   width: 80%;
-  border: 1px solid black;
+
   position: relative;
   height: 50px;
   margin-inline: auto;
   max-width: 1500px;
   overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgb(0, 0, 0, 1) 20%,
+    rgb(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
 .item {
