@@ -14,7 +14,6 @@ body {
 
 body > div {
   width: 80%;
-
   position: relative;
   height: 50px;
   margin-inline: auto;
@@ -30,12 +29,12 @@ body > div {
 }
 
 .item {
-  background: red;
+  background: white;
   width: 100px;
   height: 50px;
   border-radius: 5px;
   position: absolute;
-  left: 100%;
+  left: max(calc(100px * 10), 100%);
   animation-name: animate;
   animation-duration: 30s;
   animation-timing-function: linear;
@@ -74,15 +73,12 @@ body > div {
 }
 
 @keyframes animate {
-  0% {
-    left: 100%;
-  }
-  100% {
+  to {
     left: -100px;
   }
 }
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .item {
     width: 80px;
     height: 40px;
@@ -110,4 +106,4 @@ body > div {
   body > div {
     height: 25px;
   }
-}
+} */

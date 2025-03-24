@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 300vh;
+}
+
+/* bu scroll watcher - saytni oxiriga yetgan sari scroll watcher
+0 dan 100 ga qarab boradi quyida uni yasash uchun css funksiyalar keltirilgan */
+
+.scroll-watcher {
+  width: 100%;
+  height: 10px;
+  background: lime;
+  position: fixed;
+  top: 0;
+  left: 0;
+  scale: 0 1; /*scale xossasi elementning eniga va bo'yiga qanday tartibda kengayishini 
+  boshqaradi, bu yerda scale 0 1, bu degani element x chizig'i bo'yicha kattalikka ega emas  bo'yiga esa o'z xolicha nommoyon 
+  bo'lishi kerak, scale xossasi berilganligining sababi bu xossa animatsiya berish jarayonida ishlatiladi*/
+  animation: scrollWatcher linear;
+  animation-timeline: scroll(
+
+  ); /* animation timeline hususiyati animatsiya qanday event sodir bo'lganda ishlashi kerakligini 
+  bildiradi, unga berilgan scoll() funksiyasi saytning page i scroll bo'lganda animatsiya nomoyon bo'lishini bildiradi
+  scroll() funksiyasi default xolatda y parametrini oladi yani sayt y o'qi bo'yicha scroll bo'lshini anglatadi
+  scroll(block) xolati xam scroll(y) xolati bilan bir xil xossaga ega. scroll(x) yoki scroll(inline) xolatlari agar viewport
+  100vw dan ortiq kenglikka ega bo'lsa scroll xossasi x o'qi bo'yicha amalga oshishini anglatadi*/
+  transform-origin: left; /*transform-origin xossasi element transformatsiyaga uchraganda uning boshlanish chegarasi qayerdan boshlanishini
+  bildiradi, agar bu xossa berilmaganda bizning scroll-watcher o'rtadan paydo bo'lishni boshlab ikki tomonga rarqalgan bo'lardi, left xususiyati bilan
+  esa chap tomondan boshlanib o'ng tomonga qarab yuradi*/
+}
+
+@keyframes scrollWatcher {
+  to {
+    scale: 1 1; /*animatsiya oxiriga yetganda scale x o'qi bo'yicha asl uzunligiga ega bo'ladi*/
+  }
+}
